@@ -22,9 +22,14 @@ public class Main {
     }
   }
 
+  private static void showClassName() {
+    log.info("getName(): " + Main.class.getName());
+    log.info("getSimpleName(): " + Main.class.getSimpleName());
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    runScheduledExecutorService();
+    showClassName();
     log.info("end");
   }
 }
