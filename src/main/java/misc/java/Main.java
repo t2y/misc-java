@@ -27,9 +27,14 @@ public class Main {
     log.info("getSimpleName(): " + Main.class.getSimpleName());
   }
 
+  private static void showFunctionalProgramming() {
+    val fp = new FunctionalProgramming();
+    fp.showDemo();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showClassName();
+    showFunctionalProgramming();
     log.info("end");
   }
 }
