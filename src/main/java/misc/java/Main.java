@@ -32,9 +32,14 @@ public class Main {
     fp.showDemo();
   }
 
+  private static void showArraySample() {
+    val a = new ArraySample();
+    a.showCompareResults();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showFunctionalProgramming();
+    showArraySample();
     log.info("end");
   }
 }
