@@ -50,12 +50,18 @@ public class Main {
     log.info("{}", StaticAbstract.Sub1.getSub(1, 2));
     log.info("{}", SubStaticMethod.getSum(1, 2));
     log.info("{}", SubStaticMethod.getSub(1, 2));
-    
+  }
+
+  private static void showCacheSample() {
+    val c = new CacheSample();
+    c.useCache();
+    log.info("---------------------------------------");
+    c.useLoadingCache();
   }
 
   public static void main(String[] args) {
     log.info("start");
-    showStaticInterfaceSample();
+    showCacheSample();
     log.info("end");
   }
 }
