@@ -64,9 +64,14 @@ public class Main {
     m.show();
   }
 
+  private static void showOptionalSample() {
+    val o = new OptionalSample();
+    o.show();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showMapSample();
+    showOptionalSample();
     log.info("end");
   }
 }
