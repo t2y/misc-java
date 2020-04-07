@@ -59,9 +59,14 @@ public class Main {
     c.useLoadingCache();
   }
 
+  private static void showMapSample() {
+    val m = new MapSample();
+    m.show();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showCacheSample();
+    showMapSample();
     log.info("end");
   }
 }
