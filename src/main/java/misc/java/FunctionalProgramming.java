@@ -14,10 +14,28 @@ public class FunctionalProgramming {
 
   private static Predicate<Object> NON_NULL = v -> Objects.nonNull(v);
 
-  public void showDemo() {
+  public void showDemo1() {
     List<String> data = Arrays.asList("foo", null, "bar", null);
     log.info(data.toString());
     val results = data.stream().filter(NON_NULL).collect(Collectors.toList());
     log.info(results.toString());
+  }
+
+  private static final NumberComparableOperator<Integer> MORE_THAN_OR_EQUAL =
+      (t1, t2) -> t1.compareTo(t2) >= 0;
+  private static final NumberComparableOperator<Integer> MORE_THAN = (t1, t2) -> t1.compareTo(t2) > 0;
+
+  public void showDemo2() {
+    val x = 3;
+    val y = 3;
+    val z = 5;
+    log.info("{}", MORE_THAN_OR_EQUAL.apply(x, y));
+    log.info("{}", MORE_THAN_OR_EQUAL.apply(x, z));
+    log.info("{}", MORE_THAN.apply(x, y));
+
+    ExpressionComparatorImpl<NumberComparableOperator<Integer>, Integer> ec =
+        new ExpressionComparatorImpl<>();
+    log.info("{}", ec.test(MORE_THAN_OR_EQUAL, x, y));
+    log.info("{}", ec.test(MORE_THAN, x, y));
   }
 }

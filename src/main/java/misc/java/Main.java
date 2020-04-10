@@ -29,7 +29,8 @@ public class Main {
 
   private static void showFunctionalProgramming() {
     val fp = new FunctionalProgramming();
-    fp.showDemo();
+    // fp.showDemo1();
+    fp.showDemo2();
   }
 
   private static void showArraySample() {
@@ -71,7 +72,7 @@ public class Main {
 
   public static void main(String[] args) {
     log.info("start");
-    showOptionalSample();
+    showFunctionalProgramming();
     log.info("end");
   }
 }
