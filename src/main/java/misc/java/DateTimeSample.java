@@ -1,6 +1,7 @@
 package misc.java;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.ZoneId;
@@ -32,12 +33,19 @@ public class DateTimeSample {
     log.info("{}", dtZoned);
     log.info("{}", dtZonedDate);
 
-    log.info("has date and time");
+    log.info("=== has date and time");
     log.info("compare: {}", now.compareTo(dtZoned));
     log.info("equals: {}", now.equals(dtZoned));
 
-    log.info("has date only");
+    log.info("=== has date only");
     log.info("compare: {}", nowDate.compareTo(dtZonedDate));
     log.info("equals: {}", nowDate.equals(dtZonedDate));
+
+    val ldt = LocalDateTime.now().atZone(ASIA_TOKYO);
+    val ldtDate = ldt.truncatedTo(ChronoUnit.DAYS);
+    log.info("=== others");
+    log.info("equals: {}", nowDate.toInstant().equals(dtZonedDate.toInstant()));
+    log.info("equals: {}", nowDate.toInstant().equals(ldt.toInstant()));
+    log.info("equals: {}", nowDate.toInstant().equals(ldtDate.toInstant()));
   }
 }
