@@ -70,9 +70,14 @@ public class Main {
     o.show();
   }
 
+  private static void showDateTimeSample() {
+    val dt = new DateTimeSample();
+    dt.showDemo();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showFunctionalProgramming();
+    showDateTimeSample();
     log.info("end");
   }
 }
