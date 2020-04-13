@@ -75,9 +75,14 @@ public class Main {
     dt.showDemo();
   }
 
+  private static void showStringSample() {
+    val s = new StringSample();
+    s.show();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showDateTimeSample();
+    showStringSample();
     log.info("end");
   }
 }
