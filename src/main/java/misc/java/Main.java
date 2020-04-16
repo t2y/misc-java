@@ -80,9 +80,14 @@ public class Main {
     s.show();
   }
 
+  private static void showListSample() {
+    val s = new ListSample();
+    s.showSubList();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showStringSample();
+    showListSample();
     log.info("end");
   }
 }
