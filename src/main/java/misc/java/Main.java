@@ -85,9 +85,14 @@ public class Main {
     s.showSubList();
   }
 
+  private static void showStreamSample() {
+    val s = new StreamSample();
+    s.show();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showListSample();
+    showStreamSample();
     log.info("end");
   }
 }
