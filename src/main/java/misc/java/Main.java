@@ -90,9 +90,14 @@ public class Main {
     s.show();
   }
 
+  private static void showLoggingSample() {
+    val s = new LoggingSample();
+    s.show();
+  }
+
   public static void main(String[] args) {
     log.info("start");
-    showStreamSample();
+    showLoggingSample();
     log.info("end");
   }
 }
